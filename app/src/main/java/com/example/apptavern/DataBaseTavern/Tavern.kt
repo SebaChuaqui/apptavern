@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 
 @Entity (tableName = "table_tavern")
 data class Tavern(
-                @PrimaryKey(autoGenerate = true)
+    @PrimaryKey(autoGenerate = true)
                 @NonNull
                 var id: Int = 0,
                 var product: String,
@@ -15,5 +15,7 @@ data class Tavern(
                 var quantity: Int = 0,
                 var total: Int = 0
 )
+
+
 
 
