@@ -24,4 +24,5 @@ interface TavernDao {
 
     @Query("DELETE FROM table_tavern")
     suspend fun deleteAllTask()
+
 }

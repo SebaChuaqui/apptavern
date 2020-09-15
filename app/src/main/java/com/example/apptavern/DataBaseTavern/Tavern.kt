@@ -10,8 +10,10 @@ data class Tavern(
                 @PrimaryKey(autoGenerate = true)
                 @NonNull
                 var id: Int = 0,
-                var item: String,
+                var product: String,
                 var price: Int = 0,
                 var quantity: Int = 0,
                 var total: Int = 0
 )
+
+
