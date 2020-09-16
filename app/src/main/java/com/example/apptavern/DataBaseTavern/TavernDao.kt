@@ -7,22 +7,24 @@ import androidx.room.*
 interface TavernDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertOneBar(mTavern: Tavern)
+    suspend fun insertOneTavern(mTavern: Tavern)
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insertMultipleTavern(mListTavern: List<Tavern>)
 
     @Update
-    suspend fun updateOneTask(mTavern: Tavern)
+    suspend fun updateOneTavern(mTavern: Tavern)
 
     @Delete
-    fun deleteOneTask(mTavern: Tavern)
+    fun deleteOneTavern(mTavern: Tavern)
 
     @Query("SELECT * FROM table_tavern")
     fun getAllTaskFromDb(): LiveData<List<Tavern>>
 
-    // Busca un elemento por ID
     @Query("SELECT * FROM table_tavern WHERE id =:mId")
     fun getOneTaskByID(mId: Int): LiveData<Tavern>
 
     @Query("DELETE FROM table_tavern")
-    suspend fun deleteAllTask()
+    suspend fun deleteAllTavern()
 
 }

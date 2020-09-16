@@ -12,12 +12,11 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import kotlinx.android.synthetic.main.fragment_first.*
+import kotlinx.android.synthetic.main.fragment_first.view.*
 
 import kotlinx.android.synthetic.main.fragment_second.*
 
-/**
- * A simple [Fragment] subclass as the second destination in the navigation.
- */
+
 class SecondFragment : Fragment() {
 
     lateinit var mViewModel: TavernViewModel
@@ -44,7 +43,22 @@ class SecondFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        }
+        idTask?.let {
+            mViewModel.getOneTaskByID(it).observe(viewLifecycleOwner, Observer {
+                Log.d("OBJ_LIV", it.product)
+                Producto.setText(it.product)
+                Precio.setText(it.price)
+                Cantidad.setText(it.quantity)
 
+            })
+
+            button_second.setOnClickListener {
+                var mProducto = Producto.text.toString()
+                var mPrecio = Precio.text.toString()
+                var mCantidad = Cantidad.text.toString()
+
+            }
+        }
     }
+}
 

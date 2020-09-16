@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.apptavern.DataBaseTavern.Tavern
 import kotlinx.android.synthetic.main.tavern_item_list.view.*
 
-class Tavern_Adapter (var mPassTavern : PassTavern): RecyclerView.Adapter<Tavern_Adapter.TaskViewHolder>() {
+class Tavern_Adapter (var mPassTavern : PassTavern): RecyclerView.Adapter<Tavern_Adapter.TavernViewHolder>() {
 
     private var datalist = emptyList<Tavern>()
 
@@ -17,7 +17,7 @@ class Tavern_Adapter (var mPassTavern : PassTavern): RecyclerView.Adapter<Tavern
         notifyDataSetChanged()
     }
 
-    inner class TaskViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
+    inner class TavernViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
         View.OnClickListener {
 
         val productoText = itemView.producto
@@ -32,16 +32,15 @@ class Tavern_Adapter (var mPassTavern : PassTavern): RecyclerView.Adapter<Tavern
 
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TavernViewHolder {
+        val mTavern = LayoutInflater.from(parent.context).inflate(
             R.layout.tavern_item_list,
-            parent,
-            false
+            parent, false
         )
-        return TaskViewHolder(itemView)
+        return TavernViewHolder(mTavern)
     }
 
-    override fun onBindViewHolder(holder: TaskViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: TavernViewHolder, position: Int) {
         val mPassTavern: Tavern = datalist[position]
 
         holder.productoText.text = mPassTavern.product
@@ -54,5 +53,6 @@ class Tavern_Adapter (var mPassTavern : PassTavern): RecyclerView.Adapter<Tavern
     interface PassTavern {
         fun passTavern(mPassTavern: Tavern)
     }
+
 }
 

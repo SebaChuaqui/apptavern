@@ -31,7 +31,7 @@ class TavernViewModel(application: Application): AndroidViewModel(application) {
     fun getOneTaskByID(id : Int): LiveData<Tavern>{
         return repository.getOneTaskByID(id)
     }
-    fun updateTask(mTavern: Tavern) = viewModelScope.launch {
-        repository.updateTask(mTavern)
+    fun updateTavern(mTavern: Tavern) = viewModelScope.launch {
+        repository.updateTavern(mTavern)
     }
 }

@@ -9,19 +9,19 @@ class TavernRepository(private val mTavernDao: TavernDao) {
     val listAllTavern : LiveData<List<Tavern>> = mTavernDao.getAllTaskFromDb()
 
     suspend fun insertTavern(mTavern: Tavern) {
-        mTavernDao.insertOneBar(mTavern)
+        mTavernDao.insertOneTavern(mTavern)
     }
 
     suspend fun deleteAll(){
-        mTavernDao.deleteAllTask()
+        mTavernDao.deleteAllTavern()
     }
 
     fun getOneTaskByID(id : Int): LiveData<Tavern>{
         return mTavernDao.getOneTaskByID(id)
     }
 
-    suspend fun updateTask(mTavern: Tavern){
-        mTavernDao.updateOneTask(mTavern)
+    suspend fun updateTavern(mTavern: Tavern){
+        mTavernDao.updateOneTavern(mTavern)
     }
 
 }
