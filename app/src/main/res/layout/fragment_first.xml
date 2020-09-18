@@ -13,7 +13,7 @@
         android:layout_marginStart="44dp"
         android:layout_marginTop="36dp"
         app:layout_constraintStart_toEndOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/Precio" />
 
     <NumberData2
         android:id="@+id/numberData2"
@@ -34,11 +34,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/GUARDAR"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/Producto"
+        android:id="@+id/Precio"
         android:layout_width="145dp"
         android:layout_height="44dp"
         android:layout_marginStart="16dp"
@@ -51,7 +51,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/Precio"
+        android:id="@+id/Ingrese_Precio"
         android:layout_width="190dp"
         android:layout_height="40dp"
         android:layout_marginTop="48dp"
@@ -61,7 +61,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/Precio"
         android:layout_width="143dp"
         android:layout_height="36dp"
         android:layout_marginStart="24dp"
@@ -74,7 +74,7 @@
         app:layout_constraintTop_toBottomOf="@+id/Precio" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/total"
         android:layout_width="136dp"
         android:layout_height="36dp"
         android:layout_marginStart="36dp"
@@ -102,7 +102,7 @@
         app:layout_constraintTop_toBottomOf="@+id/numberData2" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/GUARDAR"
         android:layout_width="191dp"
         android:layout_height="75dp"
         android:layout_marginTop="16dp"

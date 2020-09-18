@@ -9,9 +9,6 @@ interface TavernDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertOneTavern(mTavern: Tavern)
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertMultipleTavern(mListTavern: List<Tavern>)
-
     @Update
     suspend fun updateOneTavern(mTavern: Tavern)
 
