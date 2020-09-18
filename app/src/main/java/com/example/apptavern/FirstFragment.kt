@@ -6,11 +6,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import com.example.apptavern.DataBaseTavern.Tavern
 import kotlinx.android.synthetic.main.fragment_first.*
 
 class FirstFragment : Fragment() {
