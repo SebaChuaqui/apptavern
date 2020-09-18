@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.example.apptavern.model.TavernViewModel
 import kotlinx.android.synthetic.main.fragment_first.*
 
 class FirstFragment : Fragment() {
@@ -38,16 +39,14 @@ class FirstFragment : Fragment() {
 
 
         idTavern?.let {
-            mViewModel.getOneTaskByID(it).observe(viewLifecycleOwner, Observer {
-                Producto.setText(it.product)
-                Precio.value(it.price)
-                Cantidad.value(it.quantity)
+            mViewModel.getOneTavernByID(it).observe(viewLifecycleOwner, Observer {
+
             })
 
 
             button_second.setOnClickListener() {
-                var textTavern1 = Producto.text.toString()
-                var textTavern2 = Precio.value
+                var textTavern1 = product.text.toString()
+                var textTavern2 = quantity.text.toString()
                 var textTavern3 = Cantidad.value
 
                 if (idTavern != null) {

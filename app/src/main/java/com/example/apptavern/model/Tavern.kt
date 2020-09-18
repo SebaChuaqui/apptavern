@@ -11,7 +11,7 @@ data class Tavern (
     @NonNull
     val id: Int =0,
     val product: String,
-    val unit: String,
+    val quantity: String,
     val price: Int
 
 )
